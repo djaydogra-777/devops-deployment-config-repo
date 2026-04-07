@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: simple-react-app
-          image: barbecuesauce/simple-react-app:bc3e35ac
+          image: barbecuesauce/simple-react-app:104b7de7
           ports:
             - containerPort: 80
           resources:
