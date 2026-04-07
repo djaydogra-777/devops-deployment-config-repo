@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: simple-react-app
-          image: kavinkumarbaskar/simple-react-app:bc3e35ac
+          image: djaydogra-777/simple-react-app:bc3e35ac
           ports:
             - containerPort: 80
           resources:
