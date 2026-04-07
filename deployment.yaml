@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-react-app
+  labels:
+    app: simple-react-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: simple-react-app
+  template:
+    metadata:
+      labels:
+        app: simple-react-app
+    spec:
+      containers:
+        - name: simple-react-app
+          image: kavinkumarbaskar/simple-react-app:9d001e6e
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "250m"
+              memory: "256Mi"
+
+ 
