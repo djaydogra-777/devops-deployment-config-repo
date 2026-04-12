@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simple-fastapi-app
+  labels:
+    app: simple-fastapi-app
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: simple-fastapi-app
+  template:
+    metadata:
+      labels:
+        app: simple-fastapi-app
+    spec:
+      containers:
+        - name: simple-fastapi-app
+          image: barbecuesauce/simple-fastapi-app:104b7de7
+          ports:
+            - containerPort: 80
+          resources:
+            requests:
+              cpu: "100m"
+              memory: "128Mi"
+            limits:
+              cpu: "250m"
+              memory: "256Mi"
+
+ 

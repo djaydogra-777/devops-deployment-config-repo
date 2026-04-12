@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: simple-fastapi-app
+  labels:
+    app: simple-fastapi-app
+spec:
+  type: LoadBalancer
+  selector:
+    app: simple-fastapi-app
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 80
+
+ 
