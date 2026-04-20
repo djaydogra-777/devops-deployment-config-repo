@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
         - name: simple-fastapi-app
-          image: barbecuesauce/simple-fastapi-app:7b7ca1d6
+          image: barbecuesauce/simple-fastapi-app:9d81b438
           ports:
             - containerPort: 80
           resources:
