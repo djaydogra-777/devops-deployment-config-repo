@@ -19,6 +19,9 @@ spec:
           image: barbecuesauce/simple-fastapi-app:b800b8df
           ports:
             - containerPort: 80
+          env:
+            - name: ENV
+              value: "prod"   # 👈 THIS ENABLES LOKI LOGGING
           resources:
             requests:
               cpu: "100m"
@@ -26,5 +29,3 @@ spec:
             limits:
               cpu: "250m"
               memory: "256Mi"
-
- 
